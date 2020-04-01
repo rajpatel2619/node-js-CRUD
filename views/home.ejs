@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+            
+    <title>Document</title>
+</head>
+<body>
+   
+    
+    <%- include('partials/nav') %> 
+    
+    <h1>home page</h1>
+    <form id="myForm">
+
+        <input type="text" name="item">
+        <button type="submit">add</button>
+
+    </form>
+    <ul>
+        <% wish.forEach(item=>{ %>
+        
+            <li onclick="deleteme(this)" > <%= item.wish %> </li>
+       
+        <%  }) %>
+    
+        
+    </ul>
+    
+   <script src="/script.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
